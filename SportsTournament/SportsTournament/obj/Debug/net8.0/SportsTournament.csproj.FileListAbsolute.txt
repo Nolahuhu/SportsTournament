@@ -17,3 +17,4 @@ C:\Users\User\Desktop\Sport Tournamanet\SportsTournament\SportsTournament\bin\De
 C:\Users\User\Desktop\Sport Tournamanet\SportsTournament\SportsTournament\bin\Debug\net8.0\Npgsql.dll
 C:\Users\User\Desktop\Sport Tournamanet\SportsTournament\SportsTournament\obj\Debug\net8.0\SportsTournament.csproj.AssemblyReference.cache
 C:\Users\User\Desktop\Sport Tournamanet\SportsTournament\SportsTournament\obj\Debug\net8.0\SportsTo.9F32E6FF.Up2Date
+C:\Users\User\Desktop\Sport Tournamanet\SportsTournament\SportsTournament\obj\Debug\net8.0\SportsTournament.sourcelink.json

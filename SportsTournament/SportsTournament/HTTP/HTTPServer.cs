@@ -62,39 +62,39 @@ namespace Server
 
             Console.WriteLine($"␦ Request: {method} {path}");
 
-            // Registrierung: POST /users
+   
             if (method == "POST" && path == "/users")
                 return HandleRegister(request);
 
-            // Login: POST /sessions
+  
             if (method == "POST" && path == "/sessions")
                 return HandleLogin(request);
 
-            // Profil ändern: PUT /users/{username}
+
             if (method == "PUT" && path.StartsWith("/users/"))
                 return HandleEditUser(request);
 
-            // Nutzer abfragen: GET /users/{username}
+            
             if (method == "GET" && path.StartsWith("/users/"))
                 return HandleUserStats(request);
 
-            // Gesamtstatistik: GET /stats
+         
             if (method == "GET" && path == "/stats")
                 return HandleGlobalStats(request);
 
-            // Scoreboard: GET /score
+        
             if (method == "GET" && path == "/score")
                 return HandleScoreboard(request);
 
-            // Pushup-History abfragen: GET /history
+          
             if (method == "GET" && path == "/history")
                 return HandleGetPushups(request);
 
-            // Pushup-History hinzufügen: POST /history
+    
             if (method == "POST" && path == "/history")
                 return HandleAddPushup(request);
 
-            // Turnierstatus: GET /tournament
+    
             if (method == "GET" && path == "/tournament")
                 return HandleTournamentState(request);
 
@@ -114,7 +114,7 @@ namespace Server
                 if (string.IsNullOrWhiteSpace(userDTO.Username) || string.IsNullOrWhiteSpace(userDTO.Password))
                     return HTTPResponse.BadRequest("Benutzername und Passwort erforderlich.");
 
-                // Verbindung zur Datenbank herstellen
+                // Verbindung zur Datenbank
                 var dbHelper = new DatabaseHelper();
                 var connection = dbHelper.ConnectToDatabase();
 
@@ -166,7 +166,7 @@ namespace Server
                     return HTTPResponse.BadRequest("Benutzername oder Passwort falsch.");
                 }
 
-                // Token generieren (hier so, dass es mit dem Curl-Skript kompatibel ist)
+                // Token generieren 
                 var token = $"{userDTO.Username}-sebToken";
                 activeTokens[token] = userDTO.Username;
 
@@ -248,7 +248,7 @@ namespace Server
                 return HTTPResponse.Unauthorized("Nicht dein Account.");
             }
 
-            // Optional: Body analysieren (z. B. Name, Bio oder Image ändern)
+            
             try
             {
                 var userDTO = JsonSerializer.Deserialize<UserEditDTO>(request.Body);
@@ -282,7 +282,7 @@ namespace Server
 
         private HTTPResponse HandleGetPushups(HTTPRequest request)
 {
-    // 🔐 Token aus dem Header lesen
+    // Token aus dem Header lesen
     if (!request.Headers.TryGetValue("Authorization", out var rawAuth))
         return HTTPResponse.Unauthorized("Token fehlt.");
 
@@ -298,7 +298,7 @@ namespace Server
     if (user == null)
         return HTTPResponse.BadRequest("Benutzer nicht gefunden.");
 
-    // 🔁 PushupEntry in PushupEntryDTO umwandeln
+    //  PushupEntry in PushupEntryDTO umwandeln
     var dtoList = user.History.Select(entry => new PushupEntryDTO
     {
         Count = entry.Count,
@@ -366,11 +366,6 @@ namespace Server
 
 
 
-
-        private HTTPResponse HandleStartTournament(HTTPRequest request)
-        {
-            return HTTPResponse.Ok("{\"message\": \"Turnier gestartet (Platzhalter)\"}");
-        }
 
         private HTTPResponse HandleScoreboard(HTTPRequest request)
         {
