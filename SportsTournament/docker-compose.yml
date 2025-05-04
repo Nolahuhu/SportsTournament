@@ -1,0 +1,21 @@
+version: '3'
+services:
+  db:
+    image: postgres:latest
+    container_name: postgres-db
+    environment:
+      POSTGRES_USER: Alon
+      POSTGRES_PASSWORD: test
+      POSTGRES_DB: sportsdb
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    networks:
+      - tournament-net
+
+volumes:
+  postgres-data:
+
+networks:
+  tournament-net:

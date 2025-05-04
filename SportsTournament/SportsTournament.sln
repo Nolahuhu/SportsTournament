@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34622.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportsTournament", "SportsTournament\SportsTournament.csproj", "{60FBA6E9-44FD-46FB-A9C7-18163CD0AE05}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{D0E2EE85-D705-4D0F-BC41-D24E806079CD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{60FBA6E9-44FD-46FB-A9C7-18163CD0AE05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60FBA6E9-44FD-46FB-A9C7-18163CD0AE05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60FBA6E9-44FD-46FB-A9C7-18163CD0AE05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60FBA6E9-44FD-46FB-A9C7-18163CD0AE05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0E2EE85-D705-4D0F-BC41-D24E806079CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0E2EE85-D705-4D0F-BC41-D24E806079CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0E2EE85-D705-4D0F-BC41-D24E806079CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0E2EE85-D705-4D0F-BC41-D24E806079CD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F8DDDFC1-5FEF-4160-9AB9-183B5A7A6682}
+	EndGlobalSection
+EndGlobal
